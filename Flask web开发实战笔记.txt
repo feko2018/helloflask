@@ -1,0 +1,49 @@
+- Flask web开发实战比较
+- python包版本
+python3.6
+flask(1.0.2)
+pip(10.0.1)
+
+pipenv(v2018.05.18)
+Pipenv是基于pip的Python包管理工具，
+
+virtualenv(15.1.0)
+pipfile(0.0.2)
+python-dotenv(0.8.2)
+watchdog(0.8.3)
+
+- HelloFlask仓库
+https://github.com/feko2018/helloflask
+
+- 安装环境
+windows 管理员进入cmd
+C:\Windows\system32>pip3  install pipenv
+
+- 创建虚拟环境
+windows 管理员进入cmd
+C:\Windows\system32> d:
+D:\> cd D:\工作目录\仓库代码\个人\GIT\helloflask\demos
+D:\工作目录\仓库代码\个人\GIT\helloflask\demos> pipenv install
+Successfully created virtual environment!
+Virtualenv location: C:\Users\yx\.virtualenvs\helloflask-QYZSVR8A
+
+- 查看项目对应的虚拟环境路径
+D:\工作目录\仓库代码\个人\GIT\helloflask\demos>pipenv --venv
+C:\Users\yx\.virtualenvs\helloflask-QYZSVR8A
+
+- 激活/进入可视化虚拟环境
+D:\工作目录\仓库代码\个人\GIT\helloflask\demos>pipenv shell
+(helloflask-QYZSVR8A) D:\工作目录\仓库代码\个人\GIT\helloflask>exit
+
+- 直接通过虚拟环境运行
+pipenv run python hello.py
+
+- 管理依赖
+pipenv install命令还会在项目文件夹根目录下创建Pipfile和Pipfile.lock文件，
+前者用来记录项目依赖包列表，而后者记录了固定版本的详细依赖包列表。
+当我们使用Pipenv安装/删除/更新依赖包时，Pipfile以及Pipfile.lock会自动更新。
+pipenv graph命令查看当前环境下的依赖情况
+执行pipenv install命令,Pipenv就会创建一个新的虚拟环境，
+然后自动从Pipfile中读取依赖并安装到新创建的虚拟环境中。
+
+
